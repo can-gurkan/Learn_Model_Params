@@ -1,0 +1,8 @@
+"BehaviorSpace results (NetLogo 6.1.0)"
+"Virus-Parameter-Learning.nlogo"
+"Test"
+"03/23/2020 10:58:33:879 -0500"
+"min-pxcor","max-pxcor","min-pycor","max-pycor"
+"-17","17","-17","17"
+"[run number]","duration","turtle-shape","infectiousness","transmission-radius","chance-recover","number-people","mobility","immunity-duration","[step]","virus-deaths","ticks","people-extinct?","virus-extinct?"
+"1","20","person","65","1.5","90","150","1","52","1118","404","1118","false","true"
