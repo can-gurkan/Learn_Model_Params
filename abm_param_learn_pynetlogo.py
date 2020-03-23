@@ -4,7 +4,7 @@ from torch import nn
 from torch import optim
 from torch.autograd import Variable
 import torch.nn.functional as F
-import abm as abm_model
+import abm_model_pynetlogo as abm_model
 
 
 class policy_estimator():
@@ -59,14 +59,15 @@ def reinforce(input, policy_estimator, model, num_episodes=10000, batch_size=10)
 def get_abm_actual_outputs():
     return torch.tensor(np.array([[507.17, 131.94, 0.0, 6.8999999999999995, 0., 0.]]),dtype=torch.float)
 
+
 def get_abm_exp_outputs(params,batch,model):
     return torch.tensor(np.array([abm_model.run_model(model,params,batch)]),dtype=torch.float)
 
 
 if __name__ == "__main__":
-	netlogo = abm_model.init_model()
-	num_params = 6
-	rand_input = torch.randn(1, 1)
-	policy_est = policy_estimator(num_params)
-	reinforce(rand_input, policy_est, netlogo)
-	netlogo.kill_workspace()
+    netlogo = abm_model.init_model()
+    num_params = 6
+    rand_input = torch.randn(1, 1)
+    policy_est = policy_estimator(num_params)
+    reinforce(rand_input, policy_est, netlogo)
+    netlogo.kill_workspace()

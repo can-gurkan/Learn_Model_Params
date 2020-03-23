@@ -40,7 +40,7 @@ def reinforce(input, policy_estimator, num_episodes=2000, batch_size=10):
         # Get outputs from model here
         output = get_abm_exp_outputs(samples.numpy()[0],batch_size)
 
-        mloss = F.mse_loss(output, y)#, reduce=False)
+        mloss = F.mse_loss(output,y,reduction="mean") * torch.ones(policy_estimator.n_outputs)
         loss = - dists.log_prob(output) * - mloss
         loss = loss.mean()
 
@@ -57,7 +57,8 @@ def reinforce(input, policy_estimator, num_episodes=2000, batch_size=10):
 
 
 def get_abm_actual_outputs():
-    return torch.tensor(np.array([[507.17, 131.94, 0.0, 6.8999999999999995, 0., 0.]]),dtype=torch.float)
+    return torch.tensor(np.array([[507.17, 131.94, 0.0, 6.8999999999999995, 0.0, 0.0]]),dtype=torch.float)
+
 
 def get_abm_exp_outputs(params,batch):
     return torch.tensor(np.array([abm_model.run_model(params,batch)]),dtype=torch.float)

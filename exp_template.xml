@@ -11,7 +11,7 @@
     <metric>people-extinct?</metric>
     <metric>virus-extinct?</metric>
     <enumeratedValueSet variable="duration">
-      <value value="0.0" />
+      <value value="738.40234" />
     </enumeratedValueSet>
     <enumeratedValueSet variable="turtle-shape">
       <value value="&quot;person&quot;" />
@@ -20,7 +20,7 @@
       <value value="0.0" />
     </enumeratedValueSet>
     <enumeratedValueSet variable="transmission-radius">
-      <value value="2.7997038" />
+      <value value="1.3640912" />
     </enumeratedValueSet>
     <enumeratedValueSet variable="chance-recover">
       <value value="0.0" />
@@ -29,7 +29,7 @@
       <value value="150" />
     </enumeratedValueSet>
     <enumeratedValueSet variable="mobility">
-      <value value="0.0" />
+      <value value="3.3928385" />
     </enumeratedValueSet>
     <enumeratedValueSet variable="immunity-duration">
       <value value="0.0" />
